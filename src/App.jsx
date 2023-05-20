@@ -9,7 +9,7 @@ function App() {
     <section className="container">
       <div className="balance">
         <div>
-          <p className="balance-title">My balance</p>
+          <p className="balance-title">My fucking balance</p>
           <p className="balance-total">$921.48</p>
         </div>
         <div className="balance-logo">
