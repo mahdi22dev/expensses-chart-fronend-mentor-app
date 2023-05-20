@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-family: "DM Sans", sans-serif;
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+  --barchart-title-color: hsl(25, 47%, 25%);
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--Cream);
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.barchart {
+  background-color: var(--Very-pale-orange);
+  width: 700px;
+  height: 500px;
+  padding: 50px;
+  padding-top: 40px;
+  position: relative;
+  border-radius: 15px;
+}
+.barchart-title {
+  font-size: clamp(20px, 2vw, 30px);
+  color: var(--barchart-title-color);
+}
+.bar-container {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  gap: 15px;
+}
+.bar {
+  position: absolute;
+  width: 50px;
+  background-color: var(--Soft-red);
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: opacity 0.4s ease;
+}
+.day {
+  position: absolute;
+  width: 50px;
+  margin: 20px;
+}
+
+.bar-modal {
+  width: 60px;
+  text-align: center;
+  background-color: var(--Dark-brown);
+  color: var(--Cream);
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 20px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+.bar-bgcolor {
+  background-color: var(--Cyan);
+}
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+.bar:hover {
+  opacity: 0.5;
+}
+
+.balance {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: var(--Soft-red);
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.balance-title {
+  color: var(--Very-pale-orange);
+  opacity: 0.8;
+}
+.balance-total {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Very-pale-orange);
+}
+.divider {
+  position: absolute;
+  background-color: var(--Soft-red);
+  width: 80%;
+  height: 1px;
+  margin: 0 auto;
+  opacity: 0.2;
+}
+.totals {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  padding-bottom: 10px;
+}
+.month-total {
+  color: var(--barchart-title-color);
+  font-size: 17px;
+}
+.month-total {
+  color: var(--barchart-title-color);
+  font-size: 17px;
+}
+.month-total-estimate {
+  color: var(--barchart-title-color);
+  font-size: 40px;
+  font-weight: 700;
+}
+.last-month-total {
+  color: var(--barchart-title-color);
+  font-size: 17px;
+  font-weight: 400;
+}
+.increase-value {
+  color: var(--barchart-title-color);
+  font-size: 17px;
+  font-weight: 700;
+}
